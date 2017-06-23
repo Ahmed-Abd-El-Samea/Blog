@@ -1,0 +1,14 @@
+<% provide(:page_title, @post.title) %>
+<% provide(:author, "active") %>
+
+<div class="row">
+	<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-center">
+		<h1><%= @post.title %></h1>
+		<p><%= @post.created_at %></p>
+		<p><%= @post.body.html_safe %></p>
+		<%= link_to 'Edit', edit_authors_post_path(@post) %> |
+		<%= link_to 'Delete', authors_post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %> |
+		<%= link_to 'Back', authors_posts_path %>
+	</div>
+</div>
+

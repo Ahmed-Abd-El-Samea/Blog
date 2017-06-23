@@ -1,0 +1,6 @@
+<% provide(:author, "active") %>
+<% provide(:page_title, 'New Post') %>
+
+<h3>New Post</h3>
+
+<%= render 'form', post: @post, url: authors_posts_url %>

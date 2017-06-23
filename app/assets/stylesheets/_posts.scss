@@ -1,0 +1,24 @@
+.card{
+	.field{
+		width: 100%;
+	}
+	.actions{
+		width: 100%;
+	}
+	textarea#post_description{
+		height: 80px;
+	}
+}
+
+.posts.index{
+	.pagi{
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.posts.show{
+	div#disqus_thread{
+		width: 100%;
+	}
+}

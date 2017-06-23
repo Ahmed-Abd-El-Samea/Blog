@@ -1,0 +1,19 @@
+<div class="col-lg-4 col-sm-6">
+	<div class="card">
+
+		<%= link_to post do %>
+		  <img class="card-img-top img-fluid" src=" <%= post.banner_image_url %> " alt="Card image cap">
+		<% end %>
+
+	  <div class="card-block">
+	    <h4 class="card-title"> <%= link_to post.title, post %> </h4>
+	    <% if post.published_at %>
+	    	<p class="card-text"> <%= post.published_on %> </p>
+	    <% end %>
+	    <p class="card-text"> <%= truncate(post.description, length: 150) %> </p>
+	    <%= link_to 'Read', post, class: 'btn btn-primary btn-sm' %>
+	    <p class="card-text"> <%= raw post.tags.map { |t| link_to t.name, posts_path(tag: t.name) }.join(", ") %> </p>
+	  </div>
+
+	</div>
+</div>
